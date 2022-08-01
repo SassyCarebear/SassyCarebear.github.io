@@ -7,8 +7,8 @@
 */
 :root{
 
-    --shadow: 5px 5px 8px 5px #016064;
-    --blue:  #016064;
+    --shadow: 5px 5px 8px 5px #1520a6;
+    --blue:  #1520a6;
     --light: #f7e5e2;
     --dark: #c4a5d9;
 
@@ -26,6 +26,8 @@ html{
   margin-top: 30px;
   box-shadow: var(--shadow);
   padding: 10px;
+  max-width: 360px;
+  margin-left: 30px;
 }
 .main h1, .about h2{
   padding:5px;
@@ -44,13 +46,15 @@ html{
   box-shadow: var(--shadow);
   padding: 20px;
   margin-top: 50px;
+  max-width: 360px;
+  margin-left: 30px;
 }
 
 .about p{
   justify-content: center;
   padding: 15px;
   max-width: 300px;
-  margin-left: 15%;
+  /* margin-left: 5%; */
 }
 /*---------------------------------------- Resume ---------------------------------------------*/
 .main-resume{
