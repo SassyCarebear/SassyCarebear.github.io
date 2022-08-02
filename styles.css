@@ -7,27 +7,37 @@
 */
 :root{
 
-    --shadow: 5px 5px 8px 5px #1520a6;
-    --blue:  #1520a6;
-    --light: #f7e5e2;
-    --dark: #c4a5d9;
+    --shadow: 5px 5px 8px 5px #212834;
+    --dark:  #0480c2;
+    --blue: #212834;
 
 }
 html{
-  padding: 20px;
+  padding: 20px 20px;
   font-family:  'Playfair Display', serif;
   box-sizing: border-box;
+  background-color: var(--blue);
+}
+
+.container{
+  padding: 20px 0px 60px 45px;
+  text-align: center;
 }
 
 
-
 /*------------------------------------ Main Page -------------------------------------------- */
+.main-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
 .main{
-  margin-top: 30px;
   box-shadow: var(--shadow);
-  padding: 10px;
-  max-width: 360px;
-  margin-left: 30px;
+  padding: 20px;
+  margin-top: 50px;
+  max-width: 440px;
+  margin: 15px;
+
 }
 .main h1, .about h2{
   padding:5px;
@@ -38,29 +48,35 @@ html{
   color: white;
 }
 .main img{
+  margin: 15px;
   margin-bottom: 45px;
   border-radius: 3%;
   border: 2px var(--blue) solid;
+  width: 350px;
+  box-sizing: content-box;
 }
 .about{
   box-shadow: var(--shadow);
   padding: 20px;
   margin-top: 50px;
-  max-width: 360px;
-  margin-left: 30px;
+  max-width: 440px;
+  margin: 15px;
 }
 
 .about p{
   justify-content: center;
   padding: 15px;
   max-width: 300px;
-  /* margin-left: 5%; */
+  margin-left: 13%;
 }
 /*---------------------------------------- Resume ---------------------------------------------*/
 .main-resume{
   margin: 30px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.main-resume h1, .main-education h1{
+ h1, .main-education h1{
   font-size: 2.5em;
   font-weight: bold;
   margin-bottom: 30px;
@@ -68,12 +84,14 @@ html{
   background-color: var(--blue);
   color:white;
 }
+
 section{
-  margin: 40px 0px 40px 0px;
+  margin: 25px 5px 20px 30px;
   border: 2px solid var(--blue);
   border-radius: 10%;
   box-shadow: var(--shadow);
   padding: 20px;
+  width: 420px;
 }
 section div{
   font-weight: bold;
@@ -87,22 +105,76 @@ section div p{
 /*----------------------------------------- Education ----------------------------------------------*/
 
 .taken, .will-take{
-  margin: 20px 0px 80px 0px;
+  margin: 20px 0px 20px 40px;
   border: 2px solid var(--blue);
   border-radius: 10%;
   box-shadow: var(--shadow);
   padding: 20px;
+  max-width: 400px;
+
 }
 .taken h2, .will-take h2{
   text-align: center;
   font-weight: bold;
+  padding: 30px;
+}
+h5{
+    margin: 30px;
 }
 
 div ul li{
   list-style-type: none;
 }
+section div ul li{
+  font-weight: normal;
+}
+
+.education{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 45px;
+  justify-content: center;
+}
+
 
 /*-------------------------------------- Responsive Design ------------------------------------------*/
 
+@media screen and (max-width:980px){
+  .main-container{
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+  }
+  .taken, .will-take{
+    padding: 5px;
+    text-align: left;
+    max-width: 400px;
+  }
+  .education{
+    grid-template-columns: none;
+    grid-template-rows: 1fr .8fr;
+    padding: 35px;
+  }
 
-@media screen and (max-width:)
+}
+@media screen and (max-width:600px){
+  .main img{
+    margin-bottom: 35px;
+    width: 265px;
+  }
+  .taken, .will-take{
+    max-width: 330px;
+  }
+  .taken h2, .will-take h2{
+    padding: 8px;
+  }
+}
+@media screen and (max-width:400px){
+  section{
+    width: 360px;
+    margin: 15px 5px 15px 5px;
+    padding: 5px;
+  }
+  .taken, .will-take{
+    max-width: 200px;
+  }
+}
